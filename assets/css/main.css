@@ -89,7 +89,7 @@ body {
   color: #1a5129;
   font-size: var(--body-fz);
   /* font-family: var(--dm-sans-font); */
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman';
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
 }
@@ -456,7 +456,7 @@ label {
 }
 @media (min-width: 1200px) and (max-width: 1399px) {
   .common-title h2 {
-    font-size: 44px;
+    font-size: 40px;
     line-height: 1.2;
   }
 }
@@ -787,11 +787,11 @@ label {
 .logo-wrap-2 img {
   max-width: 180px;
 }
-@media (min-width: 1200px) and (max-width: 1399px) {
+/* @media (min-width: 1200px) and (max-width: 1399px) {
   .logo-wrap-2 img {
     max-width: 125px;
   }
-}
+} */
 
 .header-bottom {
   padding-top: 20px;
@@ -940,7 +940,7 @@ label {
 }
 @media (min-width: 1200px) and (max-width: 1399px) {
   .header-middle {
-    padding: 10px 12px;
+    padding: 15px 12px;
   }
 }
 .header-middle .header-info-wrap {
@@ -1667,7 +1667,7 @@ label {
 @media (min-width: 1200px) and (max-width: 1399px) {
   .header-bar-3 {
     width: 70px;
-    height: 71px;
+    /* height: 71px; */
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
@@ -3289,7 +3289,7 @@ label {
   background-position: center center;
   position: relative;
   z-index: 1;
-  padding-top: 344px;
+  padding-top: 374px;
   padding-bottom: 244px;
 }
 @media (min-width: 1400px) and (max-width: 1700px) {
@@ -3298,12 +3298,12 @@ label {
     /* padding-bottom: 170px; */
   }
 }
-@media (min-width: 1200px) and (max-width: 1399px) {
+/* @media (min-width: 1200px) and (max-width: 1399px) {
   .hero-side {
     padding-top: 230px;
     padding-bottom: 170px;
   }
-}
+} */
 @media (min-width: 992px) and (max-width: 1199px) {
   .hero-side {
     padding-top: 260px;
@@ -13532,7 +13532,7 @@ label {
 .service-card-2 .service-top h4 {
   max-width: 118px;
   width: 100%;
-  font-weight: 500;
+  font-weight: 700;
   font-size: 28px;
   line-height: 36px;
   color: var(--theme-color-3);
@@ -14780,7 +14780,7 @@ label {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   border: 0;
 }
 @media (min-width: 768px) and (max-width: 991px) {
