@@ -13532,7 +13532,7 @@ label {
 .service-card-2 .service-top h4 {
   max-width: 118px;
   width: 100%;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 28px;
   line-height: 36px;
   color: var(--theme-color-3);
