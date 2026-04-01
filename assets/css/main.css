@@ -155,7 +155,7 @@ h4,
 h5,
 h6 {
   font-family: var(--outfit-font);
-  color: var(--title-color);
+  /* color: var(--title-color); */
   font-weight: 700;
   margin-bottom: 20px;
 }
@@ -641,6 +641,7 @@ label {
   height: 200%;
   background: var(--theme-color-3);
   z-index: -1;
+  background: rgb(4, 60, 99);
   transform: translateX(-50%) translateY(-50%);
   border-radius: 200px;
   -webkit-transition: all 0.3s linear 0s;
@@ -657,8 +658,8 @@ label {
   }
 }
 .e-primary-btn .icon-wrap {
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -672,8 +673,8 @@ label {
 }
 @media (max-width: 1399px) {
   .e-primary-btn .icon-wrap {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
@@ -931,7 +932,7 @@ label {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 10px 0px;
+  padding: 20px 0px;
   background: rgba(59, 57, 57, 0.255);
   backdrop-filter: blur(14.75px);
   border-radius: 0 0 16px 16px;
@@ -940,7 +941,7 @@ label {
 }
 @media (min-width: 1200px) and (max-width: 1399px) {
   .header-middle {
-    padding: 15px 12px;
+    padding: 20px 12px;
   }
 }
 .header-middle .header-info-wrap {
@@ -1097,8 +1098,8 @@ label {
   align-items: center;
   justify-content: center;
   padding: 5px 16px;
-  font-weight: 500;
-  font-size: 18px;
+  font-weight: 600;
+  font-size: 19px;
   line-height: 167%;
   color: var(--white-color);
   border-radius: 100px;
@@ -1142,7 +1143,7 @@ label {
   left: 0;
   top: 120%;
   width: 200px;
-  background: #fff;
+  background: #6d6a6a6f;
   border-radius: 10px;
   padding: 10px 0;
   visibility: hidden;
@@ -1157,7 +1158,7 @@ label {
 }
 .main-menu-2 ul .has-dropdown .sub-menu li a {
   display: block;
-  color: #1b6497;
+  color: #fdfdfd;
   font-size: 16px;
   border-radius: 0;
   background: none;
@@ -3292,9 +3293,15 @@ label {
   padding-top: 374px;
   padding-bottom: 244px;
 }
+@media (min-width: 1700px) and (max-width: 2200px) {
+  .hero-side {
+    padding-top: 600px;
+    /* padding-bottom: 170px; */
+  }
+}
 @media (min-width: 1400px) and (max-width: 1700px) {
   .hero-side {
-    padding-top: 550px;
+    padding-top: 520px;
     /* padding-bottom: 170px; */
   }
 }
@@ -6383,14 +6390,14 @@ label {
   font-weight: 600;
   font-size: 48px;
   line-height: 60px;
-  color: #010a15;
+  /* color: #010a15; */
   margin-bottom: 7px;
 }
 .contact-form-wrap p {
   font-weight: 400;
   font-size: 18px;
   line-height: 30px;
-  color: #868681;
+  /* color: #868681; */
   margin-bottom: 32px;
 }
 .contact-form-wrap .input-wrap input {
@@ -6435,7 +6442,7 @@ label {
 }
 .contact-map iframe {
   width: 100%;
-  height: 100%;
+  height: 80%;
 }
 
 .map-section {
@@ -11513,6 +11520,9 @@ label {
   background: #f8f7f0;
   border-radius: 10px;
   padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .volunteer-detail-card:hover .thumb a img {
   transform: scale(1.1);
@@ -16879,6 +16889,7 @@ label {
 .detail-info-wrap {
   background: #f8f7f0;
   border-radius: 10px;
+  padding-top: 20px;
 }
 
 .detail-info-contents {
@@ -17092,7 +17103,7 @@ label {
   font-weight: 400;
   font-size: 18px;
   line-height: 30px;
-  color: #868681;
+  color: rgb(0 101 255);
 }
 .detail-text p b {
   font-family: var(--albert-sans-font);
@@ -17929,7 +17940,7 @@ label {
 .detail-sidebar .s-widget-wrap {
   background: #f8f7f0;
   border-radius: 10px;
-  padding: 30px 40px;
+  padding: 10px 40px;
 }
 @media (max-width: 767px) {
   .detail-sidebar .s-widget-wrap {
@@ -18950,3 +18961,145 @@ label {
     background: #0f3d3e;
     border-radius: 50px;
 }
+#breadcrumb-nav{
+  height: 100px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.top-header {
+      background: #0a3c35;
+      color: white;
+      padding: 14px 0;
+      text-align: center;
+      font-size: 1.05rem;
+      font-weight: 500;
+    }
+
+    .container {
+      /* max-width: 1180px; */
+      margin: 35px auto;
+      padding: 0 20px;
+    }
+
+    /* House Table */
+    .house-table {
+      width: 100%;
+      max-width: 680px;
+      margin: 30px auto;
+      border-collapse: collapse;
+      box-shadow: 0 8px 25px rgba(10, 60, 53, 0.15);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .house-table th {
+      background: #0a3c35;
+      color: white;
+      padding: 18px 20px;
+      font-size: 1.25rem;
+    }
+
+    .house-table td {
+      padding: 16px 22px;
+      text-align: center;
+      font-size: 1.08rem;
+      border-bottom: 1px solid #e0d9c0;
+    }
+
+    .house-table tr:nth-child(odd) {
+      background: #f0e9d8;
+    }
+
+    .house-table tr:nth-child(even) {
+      background: #e8dfc9;
+    }
+
+    /* Headings */
+    .section-title {
+      text-align: center;
+      color: #0a3c35;
+      margin: 45px 0 12px;
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    .section-title::after {
+      content: '';
+      width: 90px;
+      height: 4px;
+      background: #d4a01a;
+      display: block;
+      margin: 12px auto 0;
+      border-radius: 2px;
+    }
+
+    .subtitle {
+      text-align: center;
+      font-size: 1.15rem;
+      /* color: #555; */
+      max-width: 800px;
+      margin: 0 auto 35px;
+    }
+
+    /* Uniform Table - No Hover Effect */
+    .uniform-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 25px 0;
+      box-shadow: 0 10px 30px rgba(10, 60, 53, 0.18);
+      border-radius: 12px;
+      overflow: hidden;
+      background: white;
+    }
+
+    .uniform-table th {
+      background: #0a3c35;
+      color: white;
+      padding: 18px 14px;
+      text-align: center;
+      font-size: 1.12rem;
+    }
+
+    .uniform-table td {
+      padding: 18px 16px;
+      vertical-align: top;
+      border: 1px solid #d9d0b8;
+      font-size: 1.02rem;
+      transition: none; /* Hover effect removed */
+    }
+
+    /* No background change on hover */
+    .uniform-table tr:hover {
+      background: none !important;
+    }
+
+    .day-col {
+      background: #d4a01a;
+      color: white;
+      font-weight: bold;
+      width: 195px;
+      text-align: center;
+      font-size: 1.05rem;
+    }
+
+    .summer, .winter {
+      background: #0a3c35;
+      color: white;
+      font-weight: bold;
+      text-align: center;
+      width: 145px;
+    }
+
+    @media (max-width: 992px) {
+      .uniform-table td, .uniform-table th {
+        padding: 14px 10px;
+        font-size: 0.97rem;
+      }
+    }
+    .breadcrumb-section{
+      margin-top: -84px;
+    }

@@ -28,8 +28,8 @@
     'use strict';
 
     $(window).on('load', function () {
-        $('#preloader').delay(350).fadeOut('slow');
-        $('body').delay(350).css({ 'overflow': 'visible' });
+        $('#preloader').delay(100).fadeOut('fast');
+        $('body').delay(100).css({ 'overflow': 'visible' });
     })
 
     /*--------------------------------------------------------------
