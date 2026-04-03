@@ -2988,16 +2988,16 @@ label {
 }
 
 /* 08 Breadcrumb Css */
-.breadcrumb-section {
+/* .breadcrumb-section {
   padding-left: 85px;
   padding-right: 85px;
-}
-@media (min-width: 1400px) and (max-width: 1700px) {
+} */
+/* @media (min-width: 1400px) and (max-width: 1700px) {
   .breadcrumb-section {
     padding-left: 15px;
     padding-right: 15px;
   }
-}
+} */
 @media (min-width: 1200px) and (max-width: 1399px) {
   .breadcrumb-section {
     padding-left: 0;
@@ -3027,7 +3027,7 @@ label {
   overflow: hidden;
   clip-path: polygon(5% 0, 100% 0, 100% 100%, 0 100%);
   margin-left: -15px;
-  border-radius: 0 10px 10px 0;
+  /* border-radius: 0 10px 10px 0; */
   position: relative;
 }
 @media (min-width: 1400px) and (max-width: 1700px) {
@@ -3095,7 +3095,7 @@ label {
   padding-right: 100px;
   position: relative;
   z-index: 1;
-  border-radius: 10px 0 0 10px;
+  /* border-radius: 10px 0 0 10px; */
   overflow: hidden;
   margin-right: -15px;
   clip-path: polygon(0 0, 100% 0, 95% 100%, 0 100%);
@@ -17103,7 +17103,7 @@ label {
   font-weight: 400;
   font-size: 18px;
   line-height: 30px;
-  color: rgb(0 101 255);
+  color: rgb(20 110 158);
 }
 .detail-text p b {
   font-family: var(--albert-sans-font);
@@ -18979,11 +18979,6 @@ label {
       font-weight: 500;
     }
 
-    .container {
-      /* max-width: 1180px; */
-      margin: 35px auto;
-      padding: 0 20px;
-    }
 
     /* House Table */
     .house-table {
@@ -19100,6 +19095,4 @@ label {
         font-size: 0.97rem;
       }
     }
-    .breadcrumb-section{
-      margin-top: -84px;
-    }
+  
