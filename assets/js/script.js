@@ -25,6 +25,9 @@
 
 (function ($) {
 
+
+
+
     'use strict';
 
     $(window).on('load', function () {
@@ -32,6 +35,38 @@
         $('body').delay(100).css({ 'overflow': 'visible' });
     })
 
+
+
+
+
+
+    let lastScrollTop = 0;
+    const topBar = document.querySelector('.top-bar');
+    const headerBottom = document.querySelector('.header-bottom-layout-2');
+
+    window.addEventListener('scroll', function() {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollTop > 120) {                    // 120px scroll ke baad top bar hide
+            topBar.style.height = '0';
+            topBar.style.opacity = '0';
+            topBar.style.paddingTop = '0';
+            topBar.style.paddingBottom = '0';
+            topBar.style.margin = '0';
+
+            headerBottom.classList.add('header-sticky');
+        } else {
+            topBar.style.height = '';             // original height
+            topBar.style.opacity = '1';
+            topBar.style.paddingTop = '';
+            topBar.style.paddingBottom = '';
+            topBar.style.margin = '';
+
+            headerBottom.classList.remove('header-sticky');
+        }
+
+        lastScrollTop = scrollTop;
+    });
     /*--------------------------------------------------------------
     01 Open Sidebar JS
     --------------------------------------------------------------*/
