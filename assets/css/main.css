@@ -19772,3 +19772,91 @@ label {
 iframe {
   border-radius: 10px;
 }
+
+.scrolltabl {
+  max-height: 300px;
+  overflow-y: auto;
+  width: 60%;
+  margin: auto;
+}
+
+/* table style */
+.scrolltabl table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+/* header */
+.scrolltabl thead th {
+  background: #1b4332;
+  color: #fff;
+  font-weight: 600;
+  padding: 10px;
+}
+
+/* body */
+.scrolltabl tbody td {
+  padding: 10px;
+  color: #333;
+  font-weight: 500;
+}
+
+/* borders */
+.scrolltabl table,
+.scrolltabl th,
+.scrolltabl td {
+  border: 1px solid #ccc;
+}
+
+/* row highlight */
+.scrolltabl tbody tr:nth-child(even) {
+  background: #f8f9fa;
+}
+
+.scrolltabl tbody tr:hover {
+  background: #d8f3dc;
+  transition: 0.3s;
+}
+
+/* scrollbar */
+.scrolltabl::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrolltabl::-webkit-scrollbar-track {
+  background: #eee;
+}
+
+.scrolltabl::-webkit-scrollbar-thumb {
+  background: #2d6a4f;
+  border-radius: 10px;
+}
+
+.scrolltabl::-webkit-scrollbar-thumb:hover {
+  background: #1b4332;
+}
+
+
+.event-btn{
+    padding: 10px 25px;
+    margin: 5px;
+    border: none;
+    border-radius: 25px;
+    background: #e0e0e0;
+    color: #333;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.event-btn:hover{
+    background: #2d6a4f;
+    color: #fff;
+}
+
+.active-btn{
+    background: #2d6a4f;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}

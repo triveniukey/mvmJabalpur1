@@ -932,41 +932,90 @@
                       prepare them for leadership in the world&#698;
                     </div>
                     </div>
-                    <div class="detail-info-contents">
-
+                  <div class="detail-info-contents">
 
   <div class="detail-text">
-  <div class="contentdiv">
+    <div class="contentdiv">
 
-<div class="panel panel-border">
-<div class="panel-heading panel-head">Local School Management Committee</div>
+      <div class="transport-table-box">
 
-<div class="panel-body">
+        <div class="table-header">
+          <h4>Local School Management Committee</h4>
+        </div>
 
-<table class="tbl-faculty-i table table-striped table-bordered">
-<thead>
-<tr>
-<th>NAME</th>
-<th>DESIGNATION</th>
-<th>ADDRESS</th>
-</tr>
-</thead>
+        <!-- CONTROLS -->
+        <div class="table-controls">
+          <div>
+            Show
+            <select id="rowsPerPage">
+              <option value="5">5</option>
+              <option value="10" selected>10</option>
+              <option value="20">20</option>
+            </select>
+            entries
+          </div>
 
-<tbody id="tableBody"></tbody>
+          <div>
+            Search: <input type="text" id="searchInput" />
+          </div>
+        </div>
 
-</table>
+        <!-- TABLE -->
+        <table class="transport-table" id="tcTable">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Designation</th>
+              <th>Address</th>
+            </tr>
+          </thead>
 
-<!-- PAGINATION -->
-<div style="text-align:center; margin-top:15px;">
-<button onclick="prevPage()">Previous</button>
-<button onclick="goPage(1)" id="btn1" class="active">1</button>
-<button onclick="goPage(2)" id="btn2">2</button>
-<button onclick="nextPage()">Next</button>
-</div>
+          <tbody id="tableBody">
 
-</div>
-</div>
-</div>
+<tr><td>Mr. ARVIND SINGH THAKUR</td><td>Principal K.V</td><td>KENDIRYA VIDYALAYA GCF 1</td></tr>
+<tr><td>Dr. RAKESH SHARMA</td><td>Principal</td><td>ASHOK NAGAR, ADHARTAL JABALPUR</td></tr>
+<tr><td>Mr. D.K. GUPTA</td><td>DEO REPRESENTATIVE</td><td>D.E.O.</td></tr>
+<tr><td>Mrs. SAPNA NEHRA</td><td>SCHOOL TEACHER</td><td>BILHARI JABALPUR</td></tr>
+<tr><td>Mr. VINOD SWAMI</td><td>SCHOOL TEACHER</td><td>BILHARI JABALPUR</td></tr>
+<tr><td>Mrs. JYOTI NAMDEO</td><td>SCHOOL TEACHER</td><td>VIJAY NAGAR JABALPUR</td></tr>
+<tr><td>Mr. ANIL SINGH</td><td>PARENT</td><td>AMKHERA ADHARTAL, JABALPUR</td></tr>
+<tr><td>Mrs. RANU SINGH</td><td>PARENT</td><td>SHAKTI NAGAR, JABALPUR</td></tr>
+<tr><td>Mrs. BHAWNA THAKUR</td><td>PARENT</td><td>VIJAY NAGAR JABALPUR</td></tr>
+<tr><td>Dr. SHOBHNA PANDEY</td><td>PROFESSOR</td><td>MAN KAWAR BAI COLLEGE, JABALPUR</td></tr>
+
+<tr><td>Miss. OMISHA SONDHI</td><td>GOVT. SCHOOL TEACHER</td><td>BILHARI JABALPUR</td></tr>
+<tr><td>Mrs. MAMTA BHATTACHARJEE</td><td>Principal</td><td>SHAKTI NAGAR, JABALPUR</td></tr>
+<tr><td>Dr. Prakash Chandra Joshi</td><td>Vice President, MSS</td><td>Noida</td></tr>
+<tr><td>Shri Chandra Deo Sharma</td><td>Director Education</td><td>Noida</td></tr>
+<tr><td>Shri Bahadur Mal Jain</td><td>Director Finance</td><td>Delhi</td></tr>
+<tr><td>Shri V. R. Khare</td><td>Director CPR</td><td>Bhopal</td></tr>
+<tr><td>Shri Ved Prakash Tiwari</td><td>Director Accounts</td><td>Bhopal</td></tr>
+<tr><td>Shri Yateesh Saxena</td><td>Additional Director</td><td>Bhopal</td></tr>
+<tr><td>Shri Srikant Agasty</td><td>Treasurer, MSS</td><td>Greater Noida</td></tr>
+<tr><td>Shri Manish Mandlik</td><td>Additional Director</td><td>Bhopal</td></tr>
+<tr><td>Mrs. Reeta Prakasham</td><td>Educationist</td><td>Bhopal</td></tr>
+
+          </tbody>
+        </table>
+
+        <!-- FOOTER -->
+        <div class="table-footer">
+          <span id="tableInfo"></span>
+
+          <div class="pagination">
+            <button onclick="prevPage()">Previous</button>
+
+            <button onclick="goToPage(1)" id="page1">1</button>
+            <button onclick="goToPage(2)" id="page2">2</button>
+            <button onclick="goToPage(3)" id="page3">3</button>
+
+            <button onclick="nextPage()">Next</button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
   </div>
 
 </div>
@@ -1185,67 +1234,70 @@
 
     <!-- Main Js -->
     <script src="assets/js/script.js"></script>
-   <script>
-
+ <script>
 let currentPage = 1;
+let rowsPerPage = 10;
 
-const page1 = `
-<tr><td>Mr. ARVIND SINGH THAKUR</td><td>Principal K.V</td><td>KENDIRYA VIDYALAYA GCF 1</td></tr>
-<tr><td>Dr. RAKESH SHARMA</td><td>Principal</td><td>ASHOK NAGAR, ADHARTAL JABALPUR</td></tr>
-<tr><td>Mr. D.K. GUPTA</td><td>DEO REPRESENTATIVE</td><td>D.E.O.</td></tr>
-<tr><td>Mrs. SAPNA NEHRA</td><td>SCHOOL TEACHER</td><td>BILHARI JABALPUR</td></tr>
-<tr><td>Mr. VINOD SWAMI</td><td>SCHOOL TEACHER</td><td>BILHARI JABALPUR</td></tr>
-<tr><td>Mrs. JYOTI NAMDEO</td><td>SCHOOL TEACHER</td><td>VIJAY NAGAR JABALPUR</td></tr>
-<tr><td>Mr. ANIL SINGH</td><td>PARENT</td><td>AMKHERA ADHARTAL, JABALPUR</td></tr>
-<tr><td>Mrs. RANU SINGH</td><td>PARENT</td><td>SHAKTI NAGAR, JABALPUR</td></tr>
-<tr><td>Mrs. BHAWNA THAKUR</td><td>PARENT</td><td>VIJAY NAGAR JABALPUR</td></tr>
-<tr><td>Dr. SHOBHNA PANDEY</td><td>PROFESSOR</td><td>MAN KAWAR BAI COLLEGE, JABALPUR</td></tr>
-`;
+const tbody = document.getElementById("tableBody");
+const allRows = Array.from(tbody.getElementsByTagName("tr"));
+const searchInput = document.getElementById("searchInput");
 
-const page2 = `
-<tr><td>Miss. OMISHA SONDHI</td><td>GOVT. SCHOOL TEACHER</td><td>BILHARI JABALPUR</td></tr>
-<tr><td>Mrs. MAMTA BHATTACHARJEE</td><td>Principal</td><td>SHAKTI NAGAR, JABALPUR</td></tr>
-<tr><td>Dr. Prakash Chandra Joshi</td><td>Vice President, MSS</td><td>Noida</td></tr>
-<tr><td>Shri Chandra Deo Sharma</td><td>Director Education</td><td>Noida</td></tr>
-<tr><td>Shri Bahadur Mal Jain</td><td>Director Finance</td><td>Delhi</td></tr>
-<tr><td>Shri V. R. Khare</td><td>Director CPR</td><td>Bhopal</td></tr>
-<tr><td>Shri Ved Prakash Tiwari</td><td>Director Accounts</td><td>Bhopal</td></tr>
-<tr><td>Shri Yateesh Saxena</td><td>Additional Director</td><td>Bhopal</td></tr>
-<tr><td>Shri Srikant Agasty</td><td>Treasurer, MSS</td><td>Greater Noida</td></tr>
-<tr><td>Shri Manish Mandlik</td><td>Additional Director</td><td>Bhopal</td></tr>
-<tr><td>Mrs. Reeta Prakasham</td><td>Educationist</td><td>Bhopal</td></tr>
-`;
+function displayTable() {
+  const start = (currentPage - 1) * rowsPerPage;
+  const end = start + rowsPerPage;
 
-function loadTable(page){
-document.getElementById("tableBody").innerHTML = (page === 1) ? page1 : page2;
+  allRows.forEach((row, index) => {
+    row.style.display = (index >= start && index < end) ? "" : "none";
+  });
 
-document.getElementById("btn1").classList.remove("active");
-document.getElementById("btn2").classList.remove("active");
+  document.getElementById("tableInfo").innerText =
+    `Showing ${start + 1} to ${Math.min(end, allRows.length)} of ${allRows.length} entries`;
 
-document.getElementById("btn"+page).classList.add("active");
+  for(let i=1;i<=3;i++){
+    if(document.getElementById("page"+i)){
+      document.getElementById("page"+i).classList.remove("active");
+    }
+  }
 
-currentPage = page;
+  if(document.getElementById("page"+currentPage)){
+    document.getElementById("page"+currentPage).classList.add("active");
+  }
 }
 
-function nextPage(){
-if(currentPage < 2){
-loadTable(currentPage + 1);
-}
-}
-
-function prevPage(){
-if(currentPage > 1){
-loadTable(currentPage - 1);
-}
+function goToPage(page) {
+  currentPage = page;
+  displayTable();
 }
 
-function goPage(page){
-loadTable(page);
+function nextPage() {
+  if (currentPage < 3) {
+    currentPage++;
+    displayTable();
+  }
 }
 
-// default load
-loadTable(1);
+function prevPage() {
+  if (currentPage > 1) {
+    currentPage--;
+    displayTable();
+  }
+}
 
+document.getElementById("rowsPerPage").addEventListener("change", function () {
+  rowsPerPage = parseInt(this.value);
+  currentPage = 1;
+  displayTable();
+});
+
+searchInput.addEventListener("keyup", function () {
+  const value = this.value.toLowerCase();
+
+  allRows.forEach(row => {
+    row.style.display = row.innerText.toLowerCase().includes(value) ? "" : "none";
+  });
+});
+
+displayTable();
 </script>
   </body>
 
