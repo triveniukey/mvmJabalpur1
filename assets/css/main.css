@@ -65,9 +65,12 @@ Version: 1.0
   --icon-font: "Font Awesome 6 Pro";
   --body-fz: 16px;
 }
-
+* {
+  max-width: 100%;
+}
 /* 01 Default CSS */
 html, body {
+  overflow-x: hidden;
   scroll-behavior: smooth !important;
 }
 html::-webkit-scrollbar, body::-webkit-scrollbar {
@@ -481,9 +484,9 @@ label {
 .common-title.style-color-white h2 {
   color: var(--white-color);
 }
-.common-title.style-color-light h2 {
+/* .common-title.style-color-light h2 {
   color: var(--light-color);
-}
+} */
 .common-title.style-color-2 h2 {
   color: var(--theme-color-2);
 }
@@ -649,7 +652,7 @@ label {
   transition: all 0.3s linear 0s;
 }
 .e-primary-btn.has-icon {
-  padding: 5px 5px 5px 25px;
+  padding: 10px 5px 10px 25px;
   /* gap: 15px; */
 }
 @media (min-width: 1200px) and (max-width: 1399px) {
@@ -658,8 +661,8 @@ label {
   }
 }
 .e-primary-btn .icon-wrap {
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1142,7 +1145,9 @@ label {
   position: absolute;
   left: 0;
   top: 120%;
+
   width: 270px;
+  min-width: 270px;
   background: #6d6a6a6f;
   border-radius: 10px;
   padding: 10px 0;
@@ -19682,7 +19687,7 @@ label {
 /* IMAGE */
 .video-img {
     width: 100%;
-    height: 220px;
+    /* height: 220px; */
     object-fit: cover;
 }
 
@@ -19859,4 +19864,98 @@ iframe {
     background: #2d6a4f;
     color: #fff;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+
+
+
+
+.volunteer-card .thumb {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+/* Image normal hi rahegi */
+.volunteer-card .thumb img {
+    width: 100%;
+    display: block;
+}
+
+/* Overlay */
+.volunteer-card .thumb .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.5); /* transparent black */
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+/* Text */
+.overlay-text {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Hover par sirf overlay show hoga */
+.volunteer-card:hover .overlay {
+    opacity: 1;
+}
+
+
+
+.thumb { position:relative;  }
+
+
+.overlay {
+  position:absolute;
+  top:0; left:0;
+  width:100%; height:100%;
+  background:rgba(0,0,0,0.5);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  opacity:0;
+  transition:0.3s;
+}
+.overlay-text { color:#fff; font-size:18px; }
+.thumb:hover .overlay { opacity:1; }
+
+/* LIGHTBOX */
+.lightbox {
+  position:fixed;
+  top:0; left:0;
+  width:100%; height:100%;
+  background:rgba(0,0,0,0.9);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+}
+.lightbox img { max-width:80%; max-height:80%; }
+
+.close, .prev, .next {
+  position:absolute;
+  color:#fff;
+  font-size:40px;
+  cursor:pointer;
+}
+.close { top:20px; right:30px; }
+.prev { left:20px; top:50%; }
+.next { right:20px; top:50%; }
+
+
+.footer-section .p-b-80{
+  padding-bottom: 20px;
 }
