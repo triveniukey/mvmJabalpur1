@@ -73,6 +73,14 @@ html, body {
   overflow-x: hidden;
   scroll-behavior: smooth !important;
 }
+/* @media (max-width: 800px) {
+  *{
+    max-width: 100%;
+  }
+  body {
+    overflow-x: hidden;
+  }
+} */
 html::-webkit-scrollbar, body::-webkit-scrollbar {
   width: 10px;
   height: 10px;
@@ -508,6 +516,7 @@ label {
 
 .row {
   --bs-gutter-x: 30px;
+  max-width: 100% !important;
 }
 
 .g-0, .gy-0 {
@@ -722,6 +731,7 @@ label {
   flex: none;
   -webkit-transition: all 0.3s linear 0s;
   -o-transition: all 0.3s linear 0s;
+  font-size: 15px;
   transition: all 0.3s linear 0s;
 }
 .e-primary-btn.is-hover-white:before {
@@ -7050,6 +7060,7 @@ label {
   padding: 10px;
   border-radius: 10px;
 }
+
 .blog-card-3:hover .thumb a img {
   transform: scale(1.1);
 }
@@ -13408,6 +13419,7 @@ label {
   border-radius: 10px;
   padding: 30px;
   position: relative;
+  margin-top: 10px;
   z-index: 1;
   overflow: hidden;
 }
@@ -14660,7 +14672,7 @@ label {
   .shape-wrapped-thumb-1 .award-shape {
     gap: 12px;
     left: 15%;
-    bottom: -34%;
+    bottom: 44%;
   }
 }
 .shape-wrapped-thumb-1 .award-shape p {
@@ -19098,6 +19110,78 @@ label {
       text-align: center;
       width: 145px;
     }
+    /* Wrapper for scroll */
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Mobile Responsive */
+@media (max-width: 400px) {
+
+  .uniform-table {
+    min-width: 600px; /* force scroll */
+  }
+
+  .uniform-table th {
+    padding: 12px 10px;
+    font-size: 0.9rem;
+  }
+
+  .uniform-table td {
+    padding: 12px 10px;
+    font-size: 0.9rem;
+  }
+
+  .day-col {
+    width: 120px;
+    font-size: 0.9rem;
+  }
+
+  .summer, .winter {
+    width: 100px;
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 400px) {
+
+  .house-table,
+  .house-table thead,
+  .house-table tbody,
+  .house-table th,
+  .house-table td,
+  .house-table tr {
+    display: block;
+    width: 100%;
+  }
+
+  .house-table thead {
+    display: none; /* header hide */
+  }
+
+  .house-table tr {
+    margin-bottom: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  }
+
+  .house-table td {
+    text-align: left;
+    padding: 10px 14px;
+    border: none;
+    position: relative;
+  }
+
+  .house-table td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    display: block;
+    color: #0a3c35;
+    margin-bottom: 4px;
+  }
+}
 
     @media (max-width: 992px) {
       .uniform-table td, .uniform-table th {
@@ -19158,7 +19242,35 @@ label {
     color: #1f6f54;
     font-weight: bold;
 }
+@media (max-width: 400px) {
 
+    .cbse-table,
+    .cbse-table tbody,
+    .cbse-table tr,
+    .cbse-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .cbse-table tr {
+        margin-bottom: 12px;
+        background: #fff;
+        border-radius: 10px;
+        padding: 10px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .cbse-table td {
+        text-align: left;
+        padding: 8px 10px;
+    }
+
+    .cbse-table td:last-child {
+        text-align: left;
+        margin-top: 5px;
+        font-weight: bold;
+    }
+}
 /* Logo */
 .cbse-logo {
     text-align: center;
@@ -19306,7 +19418,24 @@ label {
     letter-spacing: 0.6px;
     border-top: 1px solid rgba(255,255,255,0.25);
 }
+@media (max-width: 400px) {
 
+    .holiday-table-header {
+        flex-direction: column;   /* row → column */
+        font-size: 13px;
+        text-align: left;
+    }
+
+    .holiday-table-header div {
+        width: 100%;
+        padding: 10px 12px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .holiday-table-header div:last-child {
+        border-bottom: none;
+    }
+}
 .header-col {
     flex: 1;
     padding: 16px 20px;
@@ -19596,7 +19725,7 @@ label {
       /* max-width: 1100px; */
       margin: 0px auto;
       background-color: #ffffff1c;
-      background-image: url("https://images.unsplash.com/photo-1511497584788-876760111969?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80");
+      /* background-image: url("https://images.unsplash.com/photo-1511497584788-876760111969?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"); */
       border-radius: 12px;
       /* background-color: #fff; */
       box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
@@ -19660,7 +19789,7 @@ label {
     .form-group label {
       font-weight: 600;
       margin-bottom: 6px;
-      color: white;
+      /* color: white; */
     }
 
     .form-group input,
@@ -19910,7 +20039,73 @@ iframe {
 .scrolltabl::-webkit-scrollbar-thumb:hover {
   background: #1b4332;
 }
+/* 🔥 SOCIAL CARD RESPONSIVE */
+@media (max-width: 768px) {
+  .social-card {
+    padding: 16px;
+  }
 
+  .social-card h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+  .social-icon {
+    width: 45px;
+    height: 45px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 400px) {
+  .social-card {
+    padding: 12px;
+    border-radius: 8px;
+    margin: 8px 6px;
+  }
+
+  .social-card h3 {
+    font-size: 15px;
+  }
+
+  .social-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 15px;
+  }
+}
+iframe {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+/* Wrapper fix */
+.scrolltabl {
+  max-height: 300px;
+  overflow-y: auto;
+  width: 60%;
+  margin: auto;
+}
+
+/* 🔥 Mobile fix */
+@media (max-width: 768px) {
+  .scrolltabl {
+    width: 90%;
+  }
+}
+
+/* @media (max-width: 400px) {
+  .scrolltabl {
+    width: 100%;
+    max-height: 250px;
+  }
+
+  .scrolltabl thead th,
+  .scrolltabl tbody td {
+    padding: 8px;
+    font-size: 13px;
+  }
+} */
 
 .event-btn{
     padding: 10px 25px;
@@ -20027,4 +20222,43 @@ iframe {
 
 .footer-section .p-b-80{
   padding-bottom: 20px;
+}
+
+.side-nav-menu {
+  width: 220px;
+  padding-left: 20px;
+  border-left: 2px dashed #ccc;
+}
+
+.side-nav-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.side-nav-menu li {
+  position: relative;
+  padding: 8px 0;
+  font-size: 14px;
+}
+
+.side-nav-menu li a {
+  text-decoration: none;
+  color: #00b36b;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.side-nav-menu li a:hover {
+  color: #007a4d;
+}
+
+/* PLUS ICON */
+.menu-toggle {
+  position: absolute;
+  left: -18px;
+  top: 8px;
+  font-size: 14px;
+  color: #444;
+  cursor: pointer;
 }
