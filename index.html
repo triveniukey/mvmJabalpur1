@@ -2143,7 +2143,7 @@
       <!-- completed-project end -->
 
       <!-- testimonial start -->
-      <section class="testimonial p-t-90 p-t-md-100 p-t-xs-80">
+      <section class="testimonial p-t-70 p-t-md-100 p-t-xs-80">
         <div class="container">
           <div class="row align-items-center justify-content-between">
             <div class="col-xl-4 m-b-lg-60 m-b-md-60 m-b-xs-60">
@@ -2178,100 +2178,39 @@
                 </a>
               </div>
             </div>
+<div class="video-wrapper">
+    
+    <!-- Layer 1 -->
+    <div class="card layer layer-1">
+      <img src="assets/img/img/video.jpg" alt="">
+    </div>
 
-            <div class="col-xl-8">
-              <div
-                class="testimonial-slider-active"
-                data-aos="fade-up"
-                data-aos-delay="400"
-                data-aos-duration="1000"
-              >
-                <div class="swiper">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <div class="testimonial-card">
-                        <div class="thumb">
-                          <!-- Image -->
-                          <img
-                            src="assets/img/img/video.jpg"
-                            alt="video thumbnail"
-                          />
+    <!-- Layer 2 -->
+    <div class="card layer layer-2">
+      <img src="assets/img/img/video.jpg" alt="">
+    </div>
 
-                          <!-- Play Button with Video -->
-                          <a
-                            href="https://www.youtube.com/watch?v=fLeJJPxua3E"
-                            class="video-play-btn"
-                            data-fancybox
-                          >
-                            <i class="fa-solid fa-play"></i>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="testimonial-card">
-                        <div class="thumb">
-                          <!-- Image -->
-                          <img
-                            src="assets/img/img/video.jpg"
-                            alt="video thumbnail"
-                          />
+    <!-- Main Card -->
+    <div class="card main-card" id="main-card">
+      <img src="assets/img/img/video.jpg" alt="" id="thumbnail">
 
-                          <!-- Play Button with Video -->
-                          <a
-                            href="https://www.youtube.com/watch?v=fLeJJPxua3E"
-                            class="video-play-btn"
-                            data-fancybox
-                          >
-                            <i class="fa-solid fa-play"></i>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="testimonial-card">
-                        <div class="thumb">
-                          <!-- Image -->
-                          <img
-                            src="assets/img/img/video.jpg"
-                            alt="video thumbnail"
-                          />
+      <!-- YouTube Embed -->
+      <iframe id="youtube-frame" 
+              src="https://www.youtube.com/embed/18N0cDsLzYI" 
+              title="YouTube video player" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen>
+      </iframe>
 
-                          <!-- Play Button with Video -->
-                          <a
-                            href="https://www.youtube.com/watch?v=fLeJJPxua3E"
-                            class="video-play-btn"
-                            data-fancybox
-                          >
-                            <i class="fa-solid fa-play"></i>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="testimonial-card">
-                        <div class="thumb">
-                          <!-- Image -->
-                          <img
-                            src="assets/img/img/video.jpg"
-                            alt="video thumbnail"
-                          />
+      <!-- Play Button -->
+      <div class="play-btn" id="play-btn">▶</div>
 
-                          <!-- Play Button with Video -->
-                          <a
-                            href="https://www.youtube.com/watch?v=fLeJJPxua3E"
-                            class="video-play-btn"
-                            data-fancybox
-                          >
-                            <i class="fa-solid fa-play"></i>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+      <!-- Close Button -->
+      <div class="close-btn" id="close-btn">✕</div>
+    </div>
+  </div>
+  
           </div>
         </div>
       </section>
@@ -2859,6 +2798,35 @@
     <!-- Main Js -->
     <script src="assets/js/script.js"></script>
     <script>
+const playBtn = document.getElementById('play-btn');
+    const closeBtn = document.getElementById('close-btn');
+    const youtubeFrame = document.getElementById('youtube-frame');
+    const thumbnail = document.getElementById('thumbnail');
+
+    // Play Video
+    playBtn.addEventListener('click', () => {
+      thumbnail.style.display = 'none';
+      playBtn.style.display = 'none';
+      youtubeFrame.style.display = 'block';
+      closeBtn.style.display = 'flex';
+      
+      // Autoplay enable by reloading with autoplay parameter
+      youtubeFrame.src = "https://www.youtube.com/embed/18N0cDsLzYI?autoplay=1";
+    });
+
+    // Close Video
+    closeBtn.addEventListener('click', () => {
+      youtubeFrame.style.display = 'none';
+      closeBtn.style.display = 'none';
+      
+      thumbnail.style.display = 'block';
+      playBtn.style.display = 'flex';
+      
+      // Reset iframe (stops video)
+      youtubeFrame.src = "https://www.youtube.com/embed/18N0cDsLzYI";
+    });
+
+
       let lastScrollTop = 0;
       const topBar = document.querySelector(".top-bar");
       const headerBottom = document.querySelector(".header-bottom-layout-2");
